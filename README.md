@@ -27,10 +27,10 @@ This integration makes use of a python script that runs to Post data to Catchpoi
 
 #### Basic test configuration
 •	Enter a new test name for the test to be created as shown in the below example.
-    test_name: 'html_test'
+    • test_name: 'html_test'
 
 •	Add a description to your test.
-    description: ''My html test’
+    • description: ''My html test’
 
 •	The status of the test can be set to ‘active’ or ‘inactive’.
     status: 'active’
