@@ -27,7 +27,9 @@ This integration makes use of a python script that runs to Post data to Catchpoi
 
 #### Basic test configuration
 •	Enter a new test name for the test to be created as shown in the below example.
-    • test_name: 'html_test'
+---
+test_name: 'html_test'
+---
 
 •	Add a description to your test.
     • description: ''My html test’
@@ -337,11 +339,11 @@ Configure test basic alerts as mentioned below:
 
 •	Enter the recipient id along with email id available in your division to receive alerts as shown in below
 o	recipients: [
-                                                 {
-                                                     id: 136997 ,
-                                                     email: pkumars@catchpoint.com
-      			          }
-   		                   ]
+                 {
+                     id: 136997 ,
+                     email: pkumars@catchpoint.com
+      			  }
+   		        ]
 
 •	Enter the alert web hook ids as shown below.
 o	alert_webhook_id: [1655,3614],
@@ -360,6 +362,7 @@ For ‘host_failure’ alert specify the number_of_runs or percentage_of_runs as
 
 For ‘test_time_with_suspect’ alert type specify the number_of_runs or percentage_of_runs as show above and in time_trigger specify the warning and critical test time in ms.
 Specify warning operator id from the below available ids 
+
 [
 0: ‘not equals’,
 2: ‘greater than’,
