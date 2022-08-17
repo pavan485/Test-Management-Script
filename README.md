@@ -27,16 +27,16 @@ This integration makes use of a python script that runs to Post data to Catchpoi
 
 #### Basic test configuration
 •	Enter a new test name for the test to be created as shown in the below example.
-o	test_name: 'html_test'
+    test_name: 'html_test'
 
 •	Add a description to your test.
-o	description: ''My html test’
+    description: ''My html test’
 
 •	The status of the test can be set to ‘active’ or ‘inactive’.
-o	status: 'active’
+    status: 'active’
 
 •	Enter your catchpoint division id.
-o	division_id: 
+    division_id: 
 
 •	Enter the product and folder id where the test should be created as shown below. For a new product or folder leave them blank 
 o	product_id: 15330
