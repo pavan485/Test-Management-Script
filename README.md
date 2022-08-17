@@ -27,31 +27,29 @@ This integration makes use of a python script that runs to Post data to Catchpoi
 
 #### Basic test configuration
 •	Enter a new test name for the test to be created as shown in the below example.
----
-test_name: 'html_test'
----
+    * `test_name: 'html_test'`
 
 •	Add a description to your test.
-    • description: ''My html test’
+    * `description: 'My html test’`
 
 •	The status of the test can be set to ‘active’ or ‘inactive’.
-    status: 'active’
+    * `status: 'active’`
 
 •	Enter your catchpoint division id.
-    division_id: 
+    * `division_id: 1234`
 
 •	Enter the product and folder id where the test should be created as shown below. For a new product or folder leave them blank 
-o	product_id: 15330
-o	folder_id: 
+    `product_id: 15330`
+    `folder_id:`
 
 #### Test type and Monitor type 
 
 Enter the test type and monitor type from the available test types, monitor types available corresponding to each test type is given below with example test data belonging to the test type.
 
 
-test_type: web 
+`test_type: web 
 monitors: [‘chrome’, ‘object’, ‘emulated’, ‘playback’, ‘mobile’, ‘mobile_playback’]
-test_url:
+test_url:`
 
 test_type: ‘transaction’
 monitor_type: [‘emulated’, ‘chrome’, ‘mobile’]
