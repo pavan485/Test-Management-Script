@@ -26,28 +26,38 @@ This integration makes use of a python script that runs to Post data to Catchpoi
 ### Configuration
 
 #### Basic test configuration
-•	Enter a new test name for the test to be created as shown in the below example.
-    * `test_name: 'html_test'`
+1.	Enter a new test name for the test to be created as shown in the below example.
+    ````
+    test_name: 'html_test'
+    ````
 
-•	Add a description to your test.
-    * `description: 'My html test’`
+2.	Add a description to your test.
+    ````
+    description: 'My html test’
+    ````
 
-•	The status of the test can be set to ‘active’ or ‘inactive’.
-    * `status: 'active’`
+3.	The status of the test can be set to ‘active’ or ‘inactive’.
+    ````
+    status: 'active’
+    ````
 
-•	Enter your catchpoint division id.
-    * `division_id: 1234`
+4.	Enter your catchpoint division id.
+    ````
+    division_id: 1234
+    ````
 
-•	Enter the product and folder id where the test should be created as shown below. For a new product or folder leave them blank 
-    `product_id: 15330`
-    `folder_id:`
+5.	Enter the product and folder id where the test should be created as shown below. For a new product or folder leave them blank 
+    ````
+    product_id: 15330
+    folder_id: 1233
+    ````
 
 #### Test type and Monitor type 
 
 Enter the test type and monitor type from the available test types, monitor types available corresponding to each test type is given below with example test data belonging to the test type.
 
-
-`test_type: web 
+````
+test_type: web 
 monitors: [‘chrome’, ‘object’, ‘emulated’, ‘playback’, ‘mobile’, ‘mobile_playback’]
 test_url:`
 
@@ -76,23 +86,18 @@ test_type: ‘ftp’
 monitor_type: ‘’
 test_url:
 
-
 test_type: ‘transport’
 monitor_type: [‘transport_tcp’, ‘transport_udp’]
 test_url:
 test_data
 
-
-
 test_type: ‘ping’
 monitor_type: [‘ping_icmp’ , ‘ping_tcp’, ‘ping_udp’]
 test_url:
 
-
 test_type: ‘traceroute’
 monitor_type: [‘traceroute _tcp’,’ traceroute _udp’, ‘traceroute_icmp’]
 test_url:
-
 
 test_type: ‘custom’
 monitor_type: [‘ssh’]
@@ -124,6 +129,7 @@ test_type: ‘bgp’
 monitor_type: ‘’
 prefix:
 
+````
 #### More settings 
 
 Under more_settings enter the start and end time along with labels and enable test data webhook.
@@ -158,7 +164,7 @@ o	availability_critical: 40
 #### Override
 
 Under override set the sections required to be overridden to true and ignore the sections to be inherited as shown below.
-
+````
 override: {
     requests: true,
     advanced_settings: true,
@@ -166,14 +172,17 @@ override: {
     targetting_schedule_settings: ,
     alerts: true
   }
+  
+````
 
 
 #### Advanced settings
 
 Under advanced_settings enter test flag ids as shown in the example from the list of available test flags.
-
+````
 Test_flag_ids:  [2,8,27]
-
+````
+````
 [
    {
       ‘id’: 2,
@@ -236,22 +245,29 @@ Test_flag_ids:  [2,8,27]
       ‘name’: ‘Capture HTTP headers on error page’
     }
 ]
-
+````
 #### Requests
 
 Configure each setting in the requests as mentioned below.
 
 •	Enter authentication type available as shown from the list below.
-o	authentication: ‘basic’
+````
+authentication: ‘basic’
+````
+````
 [
    1: ‘basic’,
    2: ‘digest’,
    3: ‘ntlm’,
    5: ‘login’
 ]
+````
 
 •	Enter the http header ids as shown below from the list.
-o	http_headers: [1,3,4]
+````
+http_headers: [1,3,4]
+````
+````
 
 [
             1:  ‘user_agent’,
@@ -270,14 +286,17 @@ o	http_headers: [1,3,4]
             16: ‘request_delay’
  ]
 
-
+````
 
 #### Insights
 
 Under insights configure indicators and tracepoints as mentioned below
 
 •	Enter the required indicator ids  available below as shown below.
-o	indicators: [8268, 6336, 6192]
+````
+indicators: [8268, 6336, 6192]
+````
+````
         [
         8268: ‘Audio_out_bitrate’
         8268: ‘Audio_out_jitter’
@@ -286,21 +305,28 @@ o	indicators: [8268, 6336, 6192]
         6337: DurationTime1’
         6192 : ‘Content-Length’
         ]
+````
 
 •	Enter the required tracepoints available in the list as shown below.
-o	tracepoints: [6193, 6194]
+````
+tracepoints: [6193, 6194]
+````
+````
     [
     6194: ‘Server’
     6193: ‘X-cache’
     ]
+````
 
 Targeting and schedule settings
 
 Configure targetting_schedule_settings as mentioned below:
 
 •	Enter the frequency from the list of given frequencies.
-o	frequency: ‘15 minutes’
-
+````
+frequency: ‘15 minutes’
+````
+````
         [
         ‘none’ 
         ‘1 minute’     
@@ -320,31 +346,41 @@ o	frequency: ‘15 minutes’
         ‘4 minutes’
         ‘2 minutes’
         ]
-
+````
 •	Enter the node distribution id from the available node distributions available below as show below.
-o	test_node_distribution_id: 1
-
+````
+test_node_distribution_id: 1
+````
+````
         [
         0: ‘random’
         1: ‘concurrent’
         ]
+ ````
+ 
 •	Enter the node ids available from catchpoint portal as shown above.
-o	    node_ids: [11,98,766]
+    ````
+    node_ids: [11,98,766]
+    ````
 
 
 #### Alerts
 Configure test basic alerts as mentioned below:
 
 •	Enter the recipient id along with email id available in your division to receive alerts as shown in below
-o	recipients: [
+````
+recipients: [
                  {
                      id: 136997 ,
                      email: pkumars@catchpoint.com
       			  }
    		        ]
+````
 
 •	Enter the alert web hook ids as shown below.
-o	alert_webhook_id: [1655,3614],
+````
+alert_webhook_id: [1655,3614]
+````
 
 
 Available alert types:
@@ -360,7 +396,7 @@ For ‘host_failure’ alert specify the number_of_runs or percentage_of_runs as
 
 For ‘test_time_with_suspect’ alert type specify the number_of_runs or percentage_of_runs as show above and in time_trigger specify the warning and critical test time in ms.
 Specify warning operator id from the below available ids 
-
+````
 [
 0: ‘not equals’,
 2: ‘greater than’,
@@ -368,7 +404,8 @@ Specify warning operator id from the below available ids
 4: ‘less than’,
 5: ‘less than or equals’
 ]
-
+````
+````
     alert_type_details: [
       { 
       alert_type: 'test_failure',
@@ -378,13 +415,14 @@ Specify warning operator id from the below available ids
         warning: 30,
         warning_operator_id: 2,
         critical: 40
-      }
-    }
-
+        }
+       }
+    ]
+````
 
 *Example:*
 
----
+````
  tests: [
 {
   test_name: 'html123',
@@ -395,7 +433,7 @@ Specify warning operator id from the below available ids
   folder_id: 4567,
   test_type: 'html',
   monitor_type: 'emulated',
-  test_url: "",
+  test_url: '',
   test_location: '',
   ftp_upload_file_size: 10,
   user_name: 'demo',
@@ -403,7 +441,7 @@ Specify warning operator id from the below available ids
   authtication: ,
   request_data: '',
   script: '',
-  test_html: '<html><head></head><body><h1>This is python</h1></body></html>,
+  test_html: html><head></head><body><h1>This is python</h1></body></html',
   test_domain: '',
   prefix: '',
   more_settings: {
@@ -466,8 +504,7 @@ Specify warning operator id from the below available ids
   }
 }
 ]
-
----
+````
 
 
 ## How to run
