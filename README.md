@@ -252,6 +252,7 @@ o	authentication: ‘basic’
 
 •	Enter the http header ids as shown below from the list.
 o	http_headers: [1,3,4]
+
 [
             1:  ‘user_agent’,
             2:  ‘accept’,
@@ -299,6 +300,7 @@ Configure targetting_schedule_settings as mentioned below:
 
 •	Enter the frequency from the list of given frequencies.
 o	frequency: ‘15 minutes’
+
         [
         ‘none’ 
         ‘1 minute’     
